@@ -1,17 +1,1602 @@
 ---
+const waNumber = "6287884494997";
 
+const waHero = `https://wa.me/${waNumber}?text=${encodeURIComponent(
+  "Halo Mojol Tea, saya ingin tanya ketersediaan dan harga kamar."
+)}`;
+
+const waBooking = `https://wa.me/${waNumber}?text=${encodeURIComponent(
+  "Halo Mojol Tea, saya ingin booking. Mohon info ketersediaan dan harga kamar."
+)}`;
+
+const mapsUrl =
+  "https://www.google.com/maps/search/?api=1&query=Homestay%20Mojol%20Tea%2C%20Pulau%20Harapan";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+
+    <title>Homestay Mojol Tea | Pulau Harapan</title>
+
+    <meta
+      name="description"
+      content="Homestay Mojol Tea di Pulau Harapan, Kepulauan Seribu. Tempat nyaman untuk menikmati suasana pulau, snorkeling, island hopping, dan liburan bersama orang terdekat."
+    />
+
+    <meta
+      name="keywords"
+      content="Homestay Mojol Tea, Homestay Pulau Harapan, Penginapan Pulau Harapan, Kepulauan Seribu"
+    />
+
+    <meta name="theme-color" content="#0b4f52" />
+  </head>
+
+  <body>
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar">
+      <div class="nav-inner">
+        <a href="#" class="logo">
+          MOJOL <span>TEA</span>
+        </a>
+
+        <div class="nav-links">
+          <a href="#tentang">Tentang</a>
+          <a href="#pengalaman">Pengalaman</a>
+          <a href="#galeri">Galeri</a>
+          <a href="#video">Video</a>
+          <a href="#lokasi">Lokasi</a>
+          <a href="#booking">Booking</a>
+        </div>
+
+        <a
+          href={waHero}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="nav-cta"
+        >
+          WhatsApp
+        </a>
+      </div>
+    </nav>
+
+    <!-- ================= HERO ================= -->
+    <header class="hero">
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <div class="hero-location">
+          <span></span>
+          PULAU HARAPAN · KEPULAUAN SERIBU
+        </div>
+
+        <h1>
+          Nikmati Pulau.
+          <br />
+          <em>Tinggal Lebih Nyaman.</em>
+        </h1>
+
+        <p>
+          Temukan tempat beristirahat yang nyaman untuk menikmati suasana
+          tropis Pulau Harapan, laut yang indah, snorkeling, dan island
+          hopping.
+        </p>
+
+        <div class="hero-actions">
+          <a
+            href={waHero}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary"
+          >
+            <span>💬</span>
+            Reservasi via WhatsApp
+          </a>
+
+          <a
+            href={mapsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-outline"
+          >
+            Lihat Lokasi
+            <span>↗</span>
+          </a>
+        </div>
+
+        <div class="hero-note">
+          <span>✦</span>
+          Tanyakan ketersediaan kamar & harga terbaru
+        </div>
+      </div>
+
+      <a href="#tentang" class="scroll-down">
+        <span>Scroll untuk menjelajah</span>
+        ↓
+      </a>
+    </header>
+
+    <!-- ================= TENTANG ================= -->
+    <section id="tentang" class="intro section">
+      <div class="intro-label">
+        <span>01</span>
+        TENTANG MOJOL TEA
+      </div>
+
+      <div class="intro-grid">
+        <div>
+          <h2>
+            Tempat sederhana untuk
+            <span> momen yang luar biasa.</span>
+          </h2>
+        </div>
+
+        <div class="intro-text">
+          <p>
+            Mojol Tea hadir sebagai pilihan tempat menginap ketika kamu ingin
+            menikmati suasana Pulau Harapan dengan lebih santai.
+          </p>
+
+          <p>
+            Setelah seharian menikmati laut dan menjelajahi pulau, kembali ke
+            tempat yang nyaman untuk beristirahat dan menikmati suasana
+            kepulauan.
+          </p>
+
+          <a href="#booking" class="text-link">
+            Rencanakan perjalananmu
+            <span>→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PENGALAMAN ================= -->
+    <section id="pengalaman" class="experience section">
+      <div class="section-heading">
+        <div>
+          <div class="intro-label">
+            <span>02</span>
+            PENGALAMAN
+          </div>
+
+          <h2>
+            Lebih dari sekedar
+            <span> tempat menginap.</span>
+          </h2>
+        </div>
+
+        <p>
+          Pulau Harapan menawarkan pengalaman wisata bahari yang cocok untuk
+          liburan singkat maupun perjalanan bersama orang terdekat.
+        </p>
+      </div>
+
+      <div class="experience-grid">
+        <article class="experience-card large">
+          <div class="card-number">01</div>
+          <div class="card-icon">🏝️</div>
+
+          <h3>Pulau Harapan</h3>
+
+          <p>
+            Nikmati suasana tropis dan pesona kepulauan yang jauh dari
+            hiruk-pikuk kota.
+          </p>
+
+          <div class="card-line"></div>
+        </article>
+
+        <article class="experience-card">
+          <div class="card-number">02</div>
+          <div class="card-icon">🌊</div>
+
+          <h3>Wisata Bahari</h3>
+
+          <p>
+            Jelajahi laut, menikmati sunset, snorkeling, dan perjalanan island
+            hopping.
+          </p>
+
+          <div class="card-line"></div>
+        </article>
+
+        <article class="experience-card">
+          <div class="card-number">03</div>
+          <div class="card-icon">🛏️</div>
+
+          <h3>Waktu Beristirahat</h3>
+
+          <p>
+            Setelah beraktivitas seharian, nikmati waktu santai sebelum kembali
+            menjelajahi pulau.
+          </p>
+
+          <div class="card-line"></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= FEATURE STRIP ================= -->
+    <section class="feature-strip">
+      <div class="feature-inner">
+        <div>
+          <span class="mini-label">DESTINASI</span>
+          <strong>Pulau Harapan</strong>
+        </div>
+
+        <div>
+          <span class="mini-label">WISATA</span>
+          <strong>Snorkeling & Island Hopping</strong>
+        </div>
+
+        <div>
+          <span class="mini-label">RESERVASI</span>
+          <strong>Via WhatsApp</strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= GALERI ================= -->
+    <section id="galeri" class="gallery-section section">
+      <div class="gallery-heading">
+        <div>
+          <div class="intro-label">
+            <span>03</span>
+            GALERI
+          </div>
+
+          <h2>
+            Pesona
+            <span> Pulau Harapan.</span>
+          </h2>
+        </div>
+
+        <p>
+          Laut biru, suasana tropis, dan perjalanan yang membuat liburan terasa
+          berbeda.
+        </p>
+      </div>
+
+      <div class="gallery">
+        <div class="gallery-item gallery-main">
+          <img
+            src="/images/gallery-01.jpg"
+            alt="Pulau Harapan"
+            loading="lazy"
+          />
+
+          <div class="image-caption">
+            <span>PULAU HARAPAN</span>
+            <strong>Keindahan Kepulauan Seribu</strong>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img
+            src="/images/gallery-02.jpg"
+            alt="Homestay Mojol Tea"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="gallery-item">
+          <img
+            src="/images/gallery-03.jpg"
+            alt="Wisata Pulau Harapan"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="gallery-item">
+          <img
+            src="/images/gallery-04.jpg"
+            alt="Laut Pulau Harapan"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= VIDEO ================= -->
+    <section id="video" class="video-section">
+      <div class="video-heading">
+        <div>
+          <div class="intro-label">
+            <span>04</span>
+            VIDEO
+          </div>
+
+          <h2>
+            Lihat langsung
+            <span> suasana Mojol Tea.</span>
+          </h2>
+        </div>
+
+        <p>
+          Intip suasana homestay dan keindahan Pulau Harapan melalui beberapa
+          video pilihan sebelum kamu datang berlibur.
+        </p>
+      </div>
+
+      <div class="video-grid">
+        <div class="video-card">
+          <video controls playsinline preload="metadata">
+            <source src="/video/mojol-01.mp4" type="video/mp4" />
+            Browser Anda tidak mendukung pemutaran video.
+          </video>
+        </div>
+
+        <div class="video-card">
+          <video controls playsinline preload="metadata">
+            <source src="/video/mojol-02.mp4" type="video/mp4" />
+            Browser Anda tidak mendukung pemutaran video.
+          </video>
+        </div>
+
+        <div class="video-card">
+          <video controls playsinline preload="metadata">
+            <source src="/video/mojol-03.mp4" type="video/mp4" />
+            Browser Anda tidak mendukung pemutaran video.
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= LOKASI ================= -->
+    <section id="lokasi" class="location-section">
+      <div class="location-inner">
+        <div class="location-heading">
+          <div class="intro-label">
+            <span>05</span>
+            LOKASI
+          </div>
+
+          <h2>
+            Temukan
+            <span> Mojol Tea.</span>
+          </h2>
+
+          <p>
+            Temukan lokasi Homestay Mojol Tea di Pulau Harapan, Kepulauan
+            Seribu. Gunakan peta di bawah untuk melihat titik lokasi sebelum
+            perjalanan.
+          </p>
+
+          <a
+            href={mapsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="location-button"
+          >
+            📍 Buka di Google Maps
+            <span>↗</span>
+          </a>
+        </div>
+
+        <div class="map-card">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.4101117893492!2d106.57815559999999!3d-5.6536640999999985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6a7940c37cd1f3%3A0xcd3feea4293112ff!2sHomestay%20Mojol%20Tea!5e0!3m2!1sid!2sid!4v1790437242302!5m2!1sid!2sid"
+            title="Lokasi Homestay Mojol Tea"
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= BOOKING ================= -->
+    <section id="booking" class="booking-section">
+      <div class="booking-inner">
+        <div class="booking-copy">
+          <div class="intro-label light-label">
+            <span>06</span>
+            RESERVASI
+          </div>
+
+          <h2>
+            Saatnya menikmati
+            <span>Pulau Harapan.</span>
+          </h2>
+
+          <p>
+            Mau tahu ketersediaan kamar, harga terbaru, atau ingin merencanakan
+            perjalanan? Hubungi Mojol Tea melalui WhatsApp.
+          </p>
+        </div>
+
+        <div class="booking-card">
+          <div class="booking-card-top">
+            <span>MOJOL TEA</span>
+            <span>● OPEN FOR INQUIRY</span>
+          </div>
+
+          <div class="phone">
+            +62 878-8449-4997
+          </div>
+
+          <p>
+            Tanyakan tanggal menginap, jumlah tamu, tipe kamar, dan harga
+            terbaru.
+          </p>
+
+          <a
+            href={waBooking}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="booking-button"
+          >
+            💬 Chat WhatsApp
+            <span>↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-logo">
+          MOJOL <span>TEA</span>
+        </div>
+
+        <p>
+          Homestay · Pulau Harapan · Kepulauan Seribu
+        </p>
+
+        <div class="footer-copy">
+          © 2026 Homestay Mojol Tea
+        </div>
+      </div>
+    </footer>
+
+    <!-- ================= FLOATING WHATSAPP ================= -->
+    <a
+      href={waBooking}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="floating-wa"
+      aria-label="Chat WhatsApp Mojol Tea"
+    >
+      <span>💬</span>
+      <strong>Chat WhatsApp</strong>
+    </a>
+
+	<!-- ================= WATERMARK ================= -->
+<div class="site-credit">
+  Designed & developed by <span>Pradista</span>
+</div>
+
+  </body>
 </html>
+
+<style>
+  :global(*) {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  :global(html) {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  :global(body) {
+    font-family:
+      Inter,
+      ui-sans-serif,
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      sans-serif;
+    color: #173d40;
+    background: #f5f8f6;
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  :global(img),
+  :global(video),
+  :global(iframe) {
+    max-width: 100%;
+  }
+
+  :global(a),
+  :global(button) {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  :global(a) {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  /* ================= NAVBAR ================= */
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+    color: white;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 26, 30, 0.72),
+      transparent
+    );
+  }
+
+  .nav-inner {
+    width: min(1240px, 100%);
+    margin: auto;
+    padding: 22px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  .logo {
+    flex-shrink: 0;
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 1px;
+  }
+
+  .logo span,
+  .footer-logo span {
+    color: #d9ad69;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: clamp(15px, 2.2vw, 28px);
+    font-size: 13px;
+    font-weight: 700;
+  }
+
+  .nav-links a {
+    opacity: 0.9;
+    transition: 0.25s;
+    white-space: nowrap;
+  }
+
+  .nav-links a:hover {
+    opacity: 1;
+    color: #f0d29e;
+  }
+
+  .nav-cta {
+    flex-shrink: 0;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 9px 16px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 800;
+    backdrop-filter: blur(10px);
+    white-space: nowrap;
+  }
+
+  /* ================= HERO ================= */
+
+  .hero {
+    min-height: 100svh;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding: 150px 30px 90px;
+    color: white;
+    background-image: url("/images/hero.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(
+        90deg,
+        rgba(0, 31, 35, 0.88) 0%,
+        rgba(0, 31, 35, 0.48) 48%,
+        rgba(0, 31, 35, 0.08) 100%
+      ),
+      linear-gradient(
+        0deg,
+        rgba(0, 20, 23, 0.72),
+        transparent 55%
+      );
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    width: min(1240px, 100%);
+    margin: auto;
+  }
+
+  .hero-location {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+  }
+
+  .hero-location span {
+    width: 7px;
+    height: 7px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: #e0b56d;
+    display: block;
+  }
+
+  .hero h1 {
+    max-width: 850px;
+    font-size: clamp(48px, 8vw, 94px);
+    line-height: 0.95;
+    letter-spacing: -4px;
+    font-weight: 850;
+  }
+
+  .hero h1 em {
+    color: #e4bd7c;
+    font-style: normal;
+  }
+
+  .hero p {
+    max-width: 650px;
+    margin-top: 27px;
+    color: rgba(255, 255, 255, 0.84);
+    font-size: 17px;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    min-height: 52px;
+    padding: 0 21px;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 850;
+    transition: 0.25s;
+    touch-action: manipulation;
+  }
+
+  .btn-primary {
+    background: #19a875;
+    color: white;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+  }
+
+  .btn-outline {
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+  }
+
+  .hero-note {
+    margin-top: 20px;
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.65);
+  }
+
+  .hero-note span {
+    color: #e4bd7c;
+  }
+
+  .scroll-down {
+    position: absolute;
+    right: 30px;
+    bottom: 40px;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    writing-mode: vertical-rl;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0.65;
+  }
+
+  /* ================= GENERAL ================= */
+
+  .section {
+    width: 100%;
+    max-width: 1240px;
+    margin: auto;
+    padding: 110px 30px;
+  }
+
+  .intro-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #0a807a;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 2px;
+  }
+
+  .intro-label span {
+    color: #c59658;
+  }
+
+  .intro-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 80px;
+    margin-top: 22px;
+  }
+
+  h2 {
+    font-size: clamp(38px, 5vw, 64px);
+    line-height: 1;
+    letter-spacing: -3px;
+    font-weight: 850;
+  }
+
+  h2 span {
+    color: #0a817b;
+  }
+
+  .intro-text {
+    padding-top: 8px;
+  }
+
+  .intro-text p {
+    color: #6f8081;
+    margin-bottom: 18px;
+  }
+
+  .text-link {
+    display: inline-flex;
+    gap: 12px;
+    margin-top: 10px;
+    color: #0a817b;
+    font-weight: 850;
+    font-size: 13px;
+  }
+
+  /* ================= EXPERIENCE ================= */
+
+  .experience {
+    background: #edf4f1;
+    max-width: none;
+    padding-left: max(30px, calc((100vw - 1180px) / 2));
+    padding-right: max(30px, calc((100vw - 1180px) / 2));
+  }
+
+  .section-heading,
+  .gallery-heading,
+  .video-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 50px;
+  }
+
+  .section-heading h2,
+  .gallery-heading h2,
+  .video-heading h2 {
+    margin-top: 17px;
+    max-width: 650px;
+  }
+
+  .section-heading > p,
+  .gallery-heading > p,
+  .video-heading > p {
+    max-width: 390px;
+    color: #718080;
+    font-size: 14px;
+  }
+
+  .experience-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 15px;
+    margin-top: 50px;
+  }
+
+  .experience-card {
+    min-height: 330px;
+    position: relative;
+    padding: 30px;
+    border-radius: 24px;
+    background: white;
+    border: 1px solid #dce8e4;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+    transition: 0.3s;
+  }
+
+  .experience-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .experience-card.large {
+    background: #0a5054;
+    color: white;
+  }
+
+  .card-number {
+    position: absolute;
+    top: 25px;
+    right: 27px;
+    font-size: 12px;
+    font-weight: 900;
+    opacity: 0.45;
+  }
+
+  .card-icon {
+    font-size: 40px;
+    margin-bottom: auto;
+  }
+
+  .experience-card h3 {
+    font-size: 23px;
+    margin-bottom: 7px;
+  }
+
+  .experience-card p {
+    color: #718080;
+    font-size: 13px;
+    max-width: 300px;
+  }
+
+  .experience-card.large p {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .card-line {
+    width: 35px;
+    height: 2px;
+    background: #d3a764;
+    margin-top: 22px;
+  }
+
+  /* ================= FEATURE STRIP ================= */
+
+  .feature-strip {
+    background: #d8ad6c;
+    color: #183a3c;
+  }
+
+  .feature-inner {
+    width: min(1240px, 100%);
+    margin: auto;
+    padding: 28px 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  .feature-inner > div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mini-label {
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    opacity: 0.65;
+  }
+
+  .feature-inner strong {
+    font-size: 15px;
+    margin-top: 3px;
+  }
+
+  /* ================= GALLERY ================= */
+
+  .gallery-section {
+    max-width: 1240px;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: 1.35fr 0.65fr 0.65fr;
+    grid-template-rows: 260px 260px;
+    gap: 12px;
+    margin-top: 50px;
+  }
+
+  .gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    background: #dfe9e6;
+  }
+
+  .gallery-main {
+    grid-row: 1 / 3;
+  }
+
+  .gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s;
+  }
+
+  .gallery-item:hover img {
+    transform: scale(1.05);
+  }
+
+  .image-caption {
+    position: absolute;
+    left: 25px;
+    right: 20px;
+    bottom: 25px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
+  }
+
+  .image-caption span {
+    font-size: 9px;
+    letter-spacing: 2px;
+    font-weight: 900;
+  }
+
+  .image-caption strong {
+    font-size: 18px;
+  }
+
+  /* ================= VIDEO ================= */
+
+  .video-section {
+    width: min(1240px, 100%);
+    margin: auto;
+    padding: 110px 30px;
+    background: #f5f8f6;
+  }
+
+  .video-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 50px;
+  }
+
+  .video-card {
+    overflow: hidden;
+    border-radius: 22px;
+    background: #0b3033;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+  }
+
+  .video-card video {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+
+  /* ================= LOKASI ================= */
+
+  .location-section {
+    width: 100%;
+    background: #edf4f1;
+    padding: 110px 30px;
+  }
+
+  .location-inner {
+    width: min(1180px, 100%);
+    margin: auto;
+    display: grid;
+    grid-template-columns: 0.75fr 1.25fr;
+    gap: 70px;
+    align-items: center;
+  }
+
+  .location-heading h2 {
+    margin-top: 18px;
+    max-width: 480px;
+  }
+
+  .location-heading p {
+    max-width: 440px;
+    margin-top: 25px;
+    color: #718080;
+    font-size: 14px;
+  }
+
+  .location-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 28px;
+    padding: 14px 18px;
+    border-radius: 12px;
+    background: #0a817b;
+    color: white;
+    font-size: 13px;
+    font-weight: 850;
+    transition: 0.25s;
+    touch-action: manipulation;
+  }
+
+  .location-button:hover {
+    transform: translateY(-2px);
+    background: #076b66;
+  }
+
+  .map-card {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 26px;
+    background: #dce8e4;
+    box-shadow: 0 20px 50px rgba(0, 40, 42, 0.12);
+  }
+
+  .map-card iframe {
+    display: block;
+    width: 100%;
+    height: 430px;
+    border: 0;
+  }
+
+  /* ================= BOOKING ================= */
+
+  .booking-section {
+    width: 100%;
+    background: #073f43;
+    color: white;
+    padding: 100px 30px;
+  }
+
+  .booking-inner {
+    width: min(1180px, 100%);
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .light-label {
+    color: #e0b56d;
+  }
+
+  .booking-copy h2 {
+    max-width: 620px;
+    margin-top: 20px;
+  }
+
+  .booking-copy h2 span {
+    color: #e1b873;
+  }
+
+  .booking-copy > p {
+    max-width: 570px;
+    margin-top: 25px;
+    color: rgba(255, 255, 255, 0.68);
+  }
+
+  .booking-card {
+    width: 100%;
+    background: #f3f7f5;
+    color: #173d40;
+    border-radius: 26px;
+    padding: 30px;
+  }
+
+  .booking-card-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    color: #0a817b;
+  }
+
+  .phone {
+    margin-top: 35px;
+    font-size: clamp(25px, 4vw, 36px);
+    font-weight: 900;
+    letter-spacing: -1px;
+    overflow-wrap: anywhere;
+  }
+
+  .booking-card p {
+    margin: 10px 0 25px;
+    color: #718080;
+    font-size: 13px;
+  }
+
+  .booking-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 52px;
+    background: #16a56e;
+    color: white;
+    padding: 16px 18px;
+    border-radius: 13px;
+    font-weight: 850;
+    font-size: 13px;
+    touch-action: manipulation;
+  }
+
+  /* ================= FOOTER ================= */
+
+  footer {
+    background: #052f32;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .footer-inner {
+    width: min(1180px, 100%);
+    margin: auto;
+    padding: 35px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    font-size: 11px;
+  }
+
+  .footer-logo {
+    color: white;
+    font-size: 18px;
+    font-weight: 900;
+  }
+
+  .footer-copy {
+    opacity: 0.6;
+  }
+
+  /* ================= FLOATING WHATSAPP ================= */
+
+  .floating-wa {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 16px;
+    border-radius: 50px;
+    background: #16a56e;
+    color: white;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.22);
+    font-size: 12px;
+    touch-action: manipulation;
+  }
+
+  .floating-wa strong {
+    font-size: 11px;
+  }
+
+  /* ================= TABLET ================= */
+
+  @media (max-width: 1024px) {
+    .nav-links {
+      gap: 15px;
+      font-size: 12px;
+    }
+
+    .nav-inner {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    .intro-grid {
+      gap: 50px;
+    }
+
+    .location-inner,
+    .booking-inner {
+      gap: 45px;
+    }
+
+    .experience-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .experience-card.large {
+      grid-column: 1 / 3;
+    }
+  }
+
+  /* ================= MOBILE / TABLET PORTRAIT ================= */
+
+  @media (max-width: 850px) {
+    .nav-links {
+      display: none;
+    }
+
+    .nav-inner {
+      padding:
+        max(16px, env(safe-area-inset-top))
+        20px
+        16px;
+    }
+
+    .hero {
+      min-height: 100svh;
+      padding:
+        135px
+        20px
+        max(75px, calc(75px + env(safe-area-inset-bottom)));
+    }
+
+    .hero-content {
+      width: 100%;
+    }
+
+    .hero h1 {
+      font-size: clamp(46px, 13vw, 72px);
+      letter-spacing: -3px;
+      max-width: 100%;
+    }
+
+    .hero p {
+      max-width: 620px;
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    .hero-actions {
+      flex-direction: column;
+      width: 100%;
+      max-width: 430px;
+    }
+
+    .btn {
+      width: 100%;
+      min-height: 54px;
+    }
+
+    .scroll-down {
+      display: none;
+    }
+
+    .section {
+      padding: 75px 20px;
+    }
+
+    .intro-grid,
+    .location-inner,
+    .booking-inner {
+      grid-template-columns: 1fr;
+      gap: 35px;
+    }
+
+    .intro-grid {
+      margin-top: 28px;
+    }
+
+    .section-heading,
+    .gallery-heading,
+    .video-heading {
+      display: block;
+    }
+
+    .section-heading > p,
+    .gallery-heading > p,
+    .video-heading > p {
+      margin-top: 20px;
+    }
+
+    .experience {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .experience-grid {
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin-top: 35px;
+    }
+
+    .experience-card.large {
+      grid-column: auto;
+    }
+
+    .experience-card {
+      min-height: 280px;
+      padding: 26px;
+    }
+
+    .feature-inner {
+      grid-template-columns: 1fr;
+      gap: 18px;
+      padding: 25px 20px;
+    }
+
+    .gallery {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 260px 180px 180px;
+      margin-top: 35px;
+    }
+
+    .gallery-main {
+      grid-column: 1 / 3;
+      grid-row: auto;
+    }
+
+    .video-section {
+      padding: 75px 20px;
+    }
+
+    .video-grid {
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 35px;
+    }
+
+    .location-section {
+      padding: 75px 20px;
+    }
+
+    .location-inner {
+      gap: 35px;
+    }
+
+    .location-heading p {
+      margin-top: 20px;
+    }
+
+    .location-button {
+      width: 100%;
+      min-height: 52px;
+    }
+
+    .map-card {
+      border-radius: 20px;
+    }
+
+    .map-card iframe {
+      height: clamp(300px, 65vw, 400px);
+    }
+
+    .booking-section {
+      padding: 75px 20px;
+    }
+
+    .booking-inner {
+      gap: 40px;
+    }
+
+    .booking-card {
+      padding: 24px;
+      border-radius: 22px;
+    }
+
+    .booking-card-top {
+      flex-wrap: wrap;
+    }
+
+    .phone {
+      margin-top: 28px;
+      font-size: clamp(23px, 7vw, 34px);
+    }
+
+    .footer-inner {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 30px 20px;
+    }
+
+    .floating-wa {
+      right: 15px;
+      bottom: max(15px, env(safe-area-inset-bottom));
+    }
+
+    .floating-wa strong {
+      display: none;
+    }
+  }
+
+  /* ================= SMALL MOBILE ================= */
+
+  @media (max-width: 480px) {
+    .logo {
+      font-size: 18px;
+    }
+
+    .nav-cta {
+      padding: 8px 13px;
+      font-size: 11px;
+    }
+
+    .hero {
+      padding-top: 125px;
+    }
+
+    .hero-location {
+      font-size: 9px;
+      letter-spacing: 1.5px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 13vw, 56px);
+      letter-spacing: -2.5px;
+    }
+
+    .hero p {
+      font-size: 14px;
+    }
+
+    .hero-note {
+      font-size: 10px;
+    }
+
+    h2 {
+      font-size: clamp(36px, 11vw, 44px);
+      letter-spacing: -2px;
+    }
+
+    .gallery {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 230px 150px 150px;
+      gap: 8px;
+    }
+
+    .gallery-item {
+      border-radius: 14px;
+    }
+
+    .image-caption {
+      left: 16px;
+      bottom: 16px;
+    }
+
+    .image-caption strong {
+      font-size: 14px;
+    }
+
+    .location-section {
+      padding: 65px 16px;
+    }
+
+    .location-button {
+      padding: 13px 15px;
+      font-size: 12px;
+    }
+
+    .map-card {
+      border-radius: 17px;
+    }
+
+    .map-card iframe {
+      height: 300px;
+    }
+
+    .booking-section {
+      padding: 65px 16px;
+    }
+
+    .booking-card {
+      padding: 22px;
+    }
+
+    .booking-card-top {
+      font-size: 8px;
+    }
+
+    .phone {
+      font-size: 23px;
+    }
+
+    .booking-card p {
+      font-size: 12px;
+    }
+
+    .floating-wa {
+      right: 12px;
+      bottom: max(12px, env(safe-area-inset-bottom));
+      width: 48px;
+      height: 48px;
+      padding: 0;
+      justify-content: center;
+    }
+  }
+
+  /* ================= EXTRA SMALL ================= */
+
+  @media (max-width: 360px) {
+    .nav-inner {
+      padding-left: 14px;
+      padding-right: 14px;
+    }
+
+    .logo {
+      font-size: 16px;
+    }
+
+    .nav-cta {
+      padding: 7px 11px;
+      font-size: 10px;
+    }
+
+    .hero {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+
+    .hero h1 {
+      font-size: 40px;
+    }
+
+    .hero-location {
+      font-size: 8px;
+    }
+
+    .gallery {
+      grid-template-rows: 210px 135px 135px;
+    }
+
+    .map-card iframe {
+      height: 270px;
+    }
+  }
+
+  /* ================= SITE CREDIT ================= */
+
+.site-credit {
+  position: fixed;
+  left: 14px;
+  bottom: 14px;
+  z-index: 90;
+  font-size: 8px;
+  letter-spacing: 0.6px;
+  color: rgba(255, 255, 255, 0.42);
+  pointer-events: none;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.site-credit span {
+  color: rgba(217, 173, 105, 0.72);
+  font-weight: 700;
+}
+
+@media (max-width: 480px) {
+  .site-credit {
+    left: 10px;
+    bottom: 9px;
+    font-size: 7px;
+  }
+}
+
+</style>
