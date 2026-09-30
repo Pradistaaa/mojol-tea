@@ -45,8 +45,9 @@ const mapsUrl =
     <nav class="navbar">
       <div class="nav-inner">
         <a href="#" class="logo">
-          MOJOL <span>TEA</span>
-        </a>
+  <img src="/faviconmojoltea.png" alt="Logo Mojol Tea" />
+  <span class="logo-text">MOJOL <b>TEA</b></span>
+</a>
 
         <div class="nav-links">
           <a href="#tentang">Tentang</a>
@@ -912,6 +913,15 @@ const mapsUrl =
             loading="lazy"
           />
         </div>
+
+         <div class="gallery-item">
+          <img
+            src="/images/gallery-05.jpg"
+            alt="Laut Pulau Harapan"
+            loading="lazy"
+          />
+        </div>
+
       </div>
     </section>
 
@@ -1159,11 +1169,29 @@ const mapsUrl =
   }
 
   .logo {
-    flex-shrink: 0;
-    font-size: 20px;
-    font-weight: 900;
-    letter-spacing: 1px;
-  }
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.logo img {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+  display: block;
+}
+
+.logo-text {
+  color: white;
+}
+
+.logo-text b {
+  color: #d9ad69;
+}
 
   .logo span,
   .footer-logo span {
