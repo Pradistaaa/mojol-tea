@@ -11,6 +11,9 @@ const waBooking = `https://wa.me/${waNumber}?text=${encodeURIComponent(
 
 const mapsUrl =
   "https://www.google.com/maps/search/?api=1&query=Homestay%20Mojol%20Tea%2C%20Pulau%20Harapan";
+
+  const bankName = "BRI";
+const accountNumber = "139601001958505";
 ---
 
 <!doctype html>
@@ -1044,19 +1047,43 @@ const mapsUrl =
           </div>
 
           <p>
-            Tanyakan tanggal menginap, jumlah tamu, tipe kamar, dan harga
-            terbaru.
-          </p>
+  Tanyakan tanggal menginap, jumlah tamu, tipe kamar, dan harga
+  terbaru.
+</p>
 
-          <a
-            href={waBooking}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="booking-button"
-          >
-            💬 Chat WhatsApp
-            <span>↗</span>
-          </a>
+<!-- PEMBAYARAN -->
+<div class="bank-info">
+  <div class="bank-label">
+    <span>PEMBAYARAN</span>
+    <span>TRANSFER BANK</span>
+  </div>
+
+  <div class="bank-name">
+    🏦 {bankName}
+  </div>
+
+  <div class="bank-account">
+    <strong>{accountNumber}</strong>
+
+    <button
+      type="button"
+      class="copy-account"
+      id="copyAccount"
+    >
+      📋 Salin Rekening
+    </button>
+  </div>
+</div>
+
+<a
+  href={waBooking}
+  target="_blank"
+  rel="noopener noreferrer"
+  class="booking-button"
+>
+  💬 Chat WhatsApp
+  <span>↗</span>
+</a>
         </div>
       </div>
     </section>
@@ -1844,6 +1871,85 @@ const mapsUrl =
     font-size: 13px;
     touch-action: manipulation;
   }
+
+  /* ================= BANK INFO ================= */
+
+.bank-info {
+  margin: 22px 0;
+  padding: 18px;
+  background: white;
+  border: 1px solid #dce8e4;
+  border-radius: 16px;
+}
+
+.bank-label {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  color: #0a817b;
+}
+
+.bank-name {
+  margin-top: 14px;
+  font-size: 14px;
+  font-weight: 850;
+  color: #173d40;
+}
+
+.bank-account {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.bank-account strong {
+  font-size: 22px;
+  letter-spacing: 1px;
+  color: #073f43;
+  overflow-wrap: anywhere;
+}
+
+.copy-account {
+  flex-shrink: 0;
+  border: 0;
+  padding: 9px 12px;
+  border-radius: 9px;
+  background: #0a817b;
+  color: white;
+  font-size: 11px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.copy-account:hover {
+  background: #076b66;
+  transform: translateY(-1px);
+}
+
+.copy-account.copied {
+  background: #16a56e;
+}
+
+@media (max-width: 480px) {
+  .bank-account {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .bank-account strong {
+    font-size: 19px;
+  }
+
+  .copy-account {
+    width: 100%;
+  }
+}
 
   /* ================= FOOTER ================= */
 
@@ -3733,5 +3839,31 @@ const mapsUrl =
       padding: 22px 20px 25px;
     }
   }
+
+<script>
+  const copyAccountButton = document.getElementById("copyAccount");
+
+  if (copyAccountButton) {
+    copyAccountButton.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText("139601001958505");
+
+        copyAccountButton.textContent = "✓ Tersalin";
+        copyAccountButton.classList.add("copied");
+
+        setTimeout(() => {
+          copyAccountButton.textContent = "📋 Salin Rekening";
+          copyAccountButton.classList.remove("copied");
+        }, 2000);
+      } catch (error) {
+        copyAccountButton.textContent = "Gagal menyalin";
+
+        setTimeout(() => {
+          copyAccountButton.textContent = "📋 Salin Rekening";
+        }, 2000);
+      }
+    });
+  }
+</script>
 
 </style>
